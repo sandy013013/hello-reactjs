@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Tbar from './components/tbar';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,8 +11,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <Tbar name={this.props.name} />
         <h1>Hello, World!</h1>
-        <h2>My name is {this.props.name}</h2>
+        <h2>My name is {this.props.user_name}</h2>
       </div>
     );
   }
@@ -20,12 +22,14 @@ class App extends React.Component {
 // define propTypes for type validation
 App.propTypes = {
   name: React.PropTypes.string,
+  user_name: React.PropTypes.string,
   attr: React.PropTypes.object
 }
 
 // define default value for props
 App.defaultProps = {
   name: 'test app',
+  user_name: 'Sandy',
   attr: {}
 }
 
