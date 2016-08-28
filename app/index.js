@@ -11,9 +11,22 @@ class App extends React.Component {
     return (
       <div>
         <h1>Hello, World!</h1>
+        <h2>My name is {this.props.name}</h2>
       </div>
     );
   }
+}
+
+// define propTypes for type validation
+App.propTypes = {
+  name: React.PropTypes.string,
+  attr: React.PropTypes.object
+}
+
+// define default value for props
+App.defaultProps = {
+  name: 'test app',
+  attr: {}
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
