@@ -1,0 +1,38 @@
+{
+  "name": "hello-reactjs",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "app/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors --content-base build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandy013013/hello-reactjs.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "sandy013013",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandy013013/hello-reactjs/issues"
+  },
+  "homepage": "https://github.com/sandy013013/hello-reactjs#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "eslint": "^3.4.0",
+    "eslint-config-google": "^0.6.0",
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
+  },
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  }
+}
