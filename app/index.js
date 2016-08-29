@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Tbar from './components/tbar';
 import Timer from './components/timer';
+import MarkdownForm from './components/form';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <Timer />
         <h1>Hello, World!</h1>
         <h2>My name is {this.props.user_name}</h2>
+        <MarkdownForm />
       </div>
     );
   }

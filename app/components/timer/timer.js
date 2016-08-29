@@ -28,7 +28,7 @@ class Timer extends React.Component{
   render() {
     return (
       <div>
-      	You have already stay on this page for {this.state.stayedMinutes} minutes
+        You have already stay on this page for {this.state.stayedMinutes} minutes
       </div>
     )
   }
