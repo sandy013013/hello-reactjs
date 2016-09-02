@@ -14,10 +14,12 @@ class App extends React.Component {
     return (
       <div>
         <Tbar name={this.props.name} />
-        <Timer />
-        <h1>Hello, World!</h1>
-        <h2>My name is {this.props.user_name}</h2>
+        <div className="jumbotron text-center">
+          <h1>Hello, World!</h1>
+          <h2>My name is {this.props.user_name}</h2>
+        </div>
         <MarkdownForm />
+        <Timer />
       </div>
     );
   }

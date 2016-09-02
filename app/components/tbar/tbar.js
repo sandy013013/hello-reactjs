@@ -9,17 +9,21 @@ class Tbar extends React.Component{
   }
   render() {
     return (
-      <div>
-      {this.props.name}
-        <div className="list-container">
-        {
-          this.props.lists.map(function(item) {
-            // assign key for each item
-            return <span key={item.id}>{item.name}</span>
-          })
-        }
+    <nav className="navbar navbar-inverse">
+      <div className="container-fluid">
+        <div className="navbar-header">
+          <a className="navbar-brand" href="#">{this.props.name}</a>
         </div>
+        <ul className="nav navbar-nav">
+          {
+            this.props.lists.map(function(item) {
+              // assign key for each item
+              return <li key={item.id}><a href="#">{item.name}</a></li>
+            })
+          }
+        </ul>
       </div>
+    </nav>
     )
   }
 }

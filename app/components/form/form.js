@@ -44,10 +44,10 @@ class MarkdownForm extends React.Component{
       <div className="mark-down-editor">
         <form onSubmit={this.handleSubmint}>
           <h3> Input </h3>
-          <textarea onChange={this.handleChange} ref="textArea" defaultValue={this.state.value} />
+          <textarea className="form-control" onChange={this.handleChange} ref="textArea" defaultValue={this.state.value} />
           <h3> Preview </h3>
           <div className="content" dangerouslySetInnerHTML={this.rawMarkup()}></div>
-          <button>Click to add new markdown</button>
+          <button className="btn btn-primary">Click to add new markdown</button>
         </form>
         <div className="list-container">
         {
@@ -63,6 +63,41 @@ class MarkdownForm extends React.Component{
         </div>
       </div>
     )
+  }
+
+  // learn about component life cycle
+
+  // render ...
+  componentWillMount() {
+    console.log('componentWillMount');
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+
+
+  // prop update
+  componentWillReceiveProps(nextProps) {
+    console.log('componentWillReceiveProps', nextProps);
+  }
+
+  // whether or not view should be update
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.value !== this.state.value;
+  }
+
+  // prop / state change, view should be update
+  componentWillUpdate() {
+    console.log('componentWillUpdate');
+  }
+
+  componentDidUpdate(prevProp, prevState) {
+    console.log('componentDidUpdate', arguments);       
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');        
   }
 }
 
